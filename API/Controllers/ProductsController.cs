@@ -1,4 +1,5 @@
 using Core.Entities;
+using Core.Interfaces;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,25 +10,25 @@ namespace Zooshop.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly StoreContext _context;
-
-        public ProductController(StoreContext context)
+        private readonly IProductRepository _repo;
+        public ProductController(IProductRepository repo)
         {
-            _context = context;
+            _repo = repo;
         }
 
         // GET: api/Product
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            return await _context.Products.ToListAsync();
+            var products = await _repo.GetProductsAsync();
+            return Ok(products);
         }
 
         // GET: api/Product/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _repo.GetProductAsync(id);
 
             if (product == null)
             {
@@ -39,12 +40,42 @@ namespace Zooshop.Controllers
 
         // POST: api/Product
         [HttpPost]
-        public async Task<ActionResult<Product>> AddProduct(Product product)
+        public async Task AddProduct(Product product)
         {
-            _context.Products.Add(product);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
+            if (product != null)
+            {
+                await _repo.AddProductAsync(product);
+            }
         }
+        [HttpDelete("{id}")]
+        public async Task DeleteProduct(int id)
+        {
+            await _repo.DeleteProductAsync(id);
+        }
+        // TODO
+        // [HttpPut("{id}")]
+        // public async Task<IActionResult> EditProduct(int id, [FromBody] Product product)
+        // {
+        //     if (id != product.Id)
+        //     {
+        //         return BadRequest("Product Id mismatch");
+        //     }
+
+        //     var existingProduct = await _repo.GetProductAsync(id);
+
+        //     if (existingProduct == null)
+        //     {
+        //         return NotFound("Product not found");
+        //     }
+
+        //     existingProduct.Name = product.Name;
+        //     existingProduct.Description = product.Description;
+        //     existingProduct.Price = product.Price;
+
+        //     await _repo.EditProductAsync(existingProduct);
+
+        //     return Ok(existingProduct);
+        // }
+
     }
 }

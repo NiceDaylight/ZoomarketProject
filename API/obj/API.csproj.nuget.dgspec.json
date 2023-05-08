@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ZoomarketProject\\API\\API.csproj": {}
+    "D:\\ZoomarketProject\\api\\API.csproj": {}
   },
   "projects": {
-    "D:\\ZoomarketProject\\API\\API.csproj": {
+    "D:\\ZoomarketProject\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ZoomarketProject\\API\\API.csproj",
+        "projectUniqueName": "D:\\ZoomarketProject\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\ZoomarketProject\\API\\API.csproj",
+        "projectPath": "D:\\ZoomarketProject\\api\\API.csproj",
         "packagesPath": "C:\\Users\\shaba\\.nuget\\packages\\",
-        "outputPath": "D:\\ZoomarketProject\\API\\obj\\",
+        "outputPath": "D:\\ZoomarketProject\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -196,6 +196,12 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.5, )"

@@ -1,15 +1,20 @@
 namespace Core.Entities
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        public int Id { get; set; }
+        public Product()
+        {
+        }
         public string Name { get; set; } = "Product name";
         public string Description { get; set; } = "Product description";
-        public string ProductCharacteristics { get; set; } = "Product characteristics";
         public decimal Price { get; set; } = 1000;
-        public string PictureUrl { get; set; } = "https://picsum.photos/seed/picsum/200/300";
-        public string ProductType { get; set; } = "Type";
-        public string ProductTypeFor { get; set; } = "TypeFor";
-        public string ProductBrand { get; set; } = "Brand";
+        public string ProductCharacteristics { get; set; }
+        public string PictureUrls { get; set; }
+        public ProductType ProductType { get; set; }
+        public int ProductTypeId { get; set; }
+        public ProductTypeFor ProductTypeFor { get; set; }
+        public int ProductTypeForId { get; set; }
+        public ProductBrand ProductBrand { get; set; }
+        public int ProductBrandId { get; set; }
     }
 }

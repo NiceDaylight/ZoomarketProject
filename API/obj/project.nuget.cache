@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r51cMvYZLClqoZY/RnMX6I8Q9Kh+4epXekex1GdzHzYYyigizz+4eFOzSC70u/gtZrkekojdI6ReBKgIueh4ow==",
+  "dgSpecHash": "8pwBZgyIhF9eNPodCgMSXAMEq/4L/G+QeDi19NiVgySKvAcmQvuouaFL8/NPKZ8Mn1KQT6yOlIDUqKC7P9UdBg==",
   "success": true,
-  "projectFilePath": "D:\\ZoomarketProject\\API\\API.csproj",
+  "projectFilePath": "D:\\ZoomarketProject\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shaba\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\shaba\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

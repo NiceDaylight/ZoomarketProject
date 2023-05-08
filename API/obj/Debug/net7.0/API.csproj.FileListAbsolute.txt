@@ -74,3 +74,7 @@ D:\ZoomarketProject\api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.D
 D:\ZoomarketProject\api\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\ZoomarketProject\api\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\ZoomarketProject\api\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\ZoomarketProject\api\bin\Debug\net7.0\Core.dll
+D:\ZoomarketProject\api\bin\Debug\net7.0\Infrastructure.dll
+D:\ZoomarketProject\api\bin\Debug\net7.0\Infrastructure.pdb
+D:\ZoomarketProject\api\bin\Debug\net7.0\Core.pdb
